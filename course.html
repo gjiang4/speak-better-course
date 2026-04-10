@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speak Better Course</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #111;
+    color: #e0e0e0;
+    min-height: 100vh;
+  }
+
+  /* Password Gate */
+  #gate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+  }
+  #gate h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+  #gate input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+  }
+  #gate input:focus { border-color: #555; }
+  #gate button {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    color: #111;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #gate button:hover { background: #ddd; }
+  #error {
+    color: #e53e3e;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    display: none;
+  }
+
+  /* Course Content */
+  #content {
+    display: none;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  #content h1 {
+    font-size: 1.75rem;
+    color: #fff;
+    margin-bottom: 2.5rem;
+  }
+  .module {
+    margin-bottom: 2.5rem;
+  }
+  .module h2 {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  .video-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .module p {
+    color: #999;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .download-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .download-btn:hover { background: #222; }
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <h1>Enter Password</h1>
+  <input type="password" id="password" placeholder="Password" autofocus>
+  <button onclick="checkPassword()">Submit</button>
+  <p id="error">Incorrect password. Please try again.</p>
+</div>
+
+<div id="content">
+  <h1>Speak Better Course</h1>
+
+  <div class="module">
+    <h2>Module 1</h2>
+    <div class="video-placeholder">YouTube embed goes here</div>
+    <p>Placeholder text for Module 1 content. Replace with lesson description.</p>
+  </div>
+
+  <div class="module">
+    <h2>Module 2</h2>
+    <div class="video-placeholder">YouTube embed goes here</div>
+    <p>Placeholder text for Module 2 content. Replace with lesson description.</p>
+  </div>
+
+  <a class="download-btn" href="#">Download PDF</a>
+</div>
+
+<script>
+  document.getElementById('password').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') checkPassword();
+  });
+
+  function checkPassword() {
+    if (document.getElementById('password').value === 'TGP888') {
+      document.getElementById('gate').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    } else {
+      document.getElementById('error').style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
