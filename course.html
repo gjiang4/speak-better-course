@@ -19,60 +19,77 @@
         }
         h1 {
             font-size: 2rem;
-            margin-bottom: 40px;
+            margin-bottom: 8px;
             text-align: center;
         }
-        h2 {
-            font-size: 1.4rem;
-            margin-bottom: 16px;
-            color: #d4a853;
-        }
-        .module {
+        .course-sub {
+            text-align: center;
+            color: #999;
+            font-size: 0.95rem;
             margin-bottom: 48px;
+        }
+        .module-header {
+            font-size: 1.4rem;
+            color: #d4a853;
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #222;
+        }
+        .video-block {
+            margin-bottom: 32px;
+        }
+        .video-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #e8e8e8;
+        }
+        .video-title-cn {
+            font-size: 0.95rem;
+            color: #999;
+            margin-bottom: 12px;
         }
         iframe {
             width: 100%;
             aspect-ratio: 16/9;
             border: none;
             border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .worksheet-btn {
+            display: inline-block;
+            background: #1e1e1e;
+            color: #d4a853;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #333;
+            border-radius: 6px;
+            text-decoration: none;
             margin-bottom: 16px;
+        }
+        .worksheet-btn:hover {
+            background: #2a2a2a;
+            border-color: #d4a853;
         }
         .video-placeholder {
             background: #1a1a1a;
             border: 1px solid #333;
             border-radius: 8px;
-            padding: 60px 24px;
+            padding: 48px 24px;
             text-align: center;
             color: #666;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         .coming-soon {
             color: #999;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-style: italic;
             margin-bottom: 16px;
         }
-        p {
-            color: #999;
-            line-height: 1.6;
-            margin-bottom: 16px;
+        .module-section {
+            margin-bottom: 56px;
         }
-        .download-btn {
-            display: inline-block;
-            background: #d4a853;
-            color: #0a0a0a;
-            padding: 14px 32px;
-            font-size: 1rem;
-            font-weight: 700;
-            border: none;
-            border-radius: 6px;
-            text-decoration: none;
-            margin-top: 24px;
-        }
-        .download-btn:hover {
-            background: #f0d080;
-        }
-        /* Password gate */
         #gate {
             display: flex;
             flex-direction: column;
@@ -131,7 +148,6 @@
 
     <div class="container">
 
-        <!-- PASSWORD GATE -->
         <div id="gate">
             <h2>課程密碼 Course Password</h2>
             <input type="password" id="password" placeholder="Enter password">
@@ -139,29 +155,86 @@
             <p id="error">密碼錯誤 Incorrect password</p>
         </div>
 
-        <!-- COURSE CONTENT -->
         <div id="content">
             <h1>Speak Better Course</h1>
+            <p class="course-sub">說得好，才值錢 — Teacher Gary 小籠包老師</p>
 
-            <div class="module">
-                <h2>Module 1</h2>
-                <iframe src="https://www.youtube.com/embed/GnOHGcqy8gI" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/fF6f8va8BN4" allowfullscreen></iframe>
+            <!-- MODULE 1 -->
+            <div class="module-section">
+                <h2 class="module-header">Module 1 — 溝通稅 The Communication Tax</h2>
+
+                <div class="video-block">
+                    <div class="video-title">1.1 The Communication Tax</div>
+                    <div class="video-title-cn">溝通稅：你的英文到底在幫你賺錢還是讓你少賺？</div>
+                    <iframe src="https://www.youtube.com/embed/GnOHGcqy8gI" allowfullscreen></iframe>
+                </div>
+
+                <div class="video-block">
+                    <div class="video-title">1.2 Why Interview Skills Are More Important Than Credentials</div>
+                    <div class="video-title-cn">為什麼面試技巧比學歷更值錢</div>
+                    <iframe src="https://www.youtube.com/embed/fF6f8va8BN4" allowfullscreen></iframe>
+                </div>
             </div>
 
-            <div class="module">
-                <h2>Module 2</h2>
-                <div class="video-placeholder">影片製作中 — Videos coming soon</div>
-                <p class="coming-soon">預計上線日期：4月16日 | Expected: April 16</p>
+            <!-- MODULE 2 -->
+            <div class="module-section">
+                <h2 class="module-header">Module 2 — 五大框架 The Five Frameworks</h2>
+
+                <div class="video-block">
+                    <div class="video-title">2.0 Module 2 Introduction</div>
+                    <div class="video-title-cn">框架總覽</div>
+                    <div class="video-placeholder">影片製作中 Coming Soon</div>
+                    <p class="coming-soon">預計上線：4月16日</p>
+                </div>
+
+                <div class="video-block">
+                    <div class="video-title">2.1 CAR Framework: How to Tell Your Story Without Rambling</div>
+                    <div class="video-title-cn">CAR 框架：如何有條理地講述你的經歷</div>
+                    <div class="video-placeholder">影片製作中 Coming Soon</div>
+                    <p class="coming-soon">預計上線：4月16日</p>
+                    <a class="worksheet-btn" href="CAR_Story_Worksheet.docx" download>📝 下載 CAR 練習工作表 Download Worksheet</a>
+                </div>
+
+                <div class="video-block">
+                    <div class="video-title">2.2 PEEP Framework: How to Answer Opinion Questions</div>
+                    <div class="video-title-cn">PEEP 框架：如何回答觀點類問題</div>
+                    <div class="video-placeholder">影片製作中 Coming Soon</div>
+                    <p class="coming-soon">即將上線</p>
+                </div>
+
+                <div class="video-block">
+                    <div class="video-title">2.3 Signposting: How to Control Any Conversation</div>
+                    <div class="video-title-cn">Signposting：如何掌控任何對話</div>
+                    <div class="video-placeholder">影片製作中 Coming Soon</div>
+                    <p class="coming-soon">即將上線</p>
+                </div>
+
+                <div class="video-block">
+                    <div class="video-title">2.4 How to Answer "Tell Me About Yourself"</div>
+                    <div class="video-title-cn">如何回答「Tell me about yourself」</div>
+                    <div class="video-placeholder">影片製作中 Coming Soon</div>
+                    <p class="coming-soon">即將上線</p>
+                </div>
+
+                <div class="video-block">
+                    <div class="video-title">2.5 Motivation Framework: All "Why" Questions</div>
+                    <div class="video-title-cn">動機框架：所有「為什麼」的問題</div>
+                    <div class="video-placeholder">影片製作中 Coming Soon</div>
+                    <p class="coming-soon">即將上線</p>
+                </div>
             </div>
 
-            <div class="module">
-                <h2>Module 3</h2>
-                <div class="video-placeholder">影片製作中 — Videos coming soon</div>
-                <p class="coming-soon">預計上線日期：4月底 | Expected: Late April</p>
-            </div>
+            <!-- MODULE 3 -->
+            <div class="module-section">
+                <h2 class="module-header">Module 3 — 反射差距 The Reflex Gap</h2>
 
-            <a class="download-btn" href="CAR_Story_Worksheet.docx" download>下載練習工作表 Download Worksheet</a>
+                <div class="video-block">
+                    <div class="video-title">3.1 The Truth About Practice</div>
+                    <div class="video-title-cn">練習的真相</div>
+                    <div class="video-placeholder">影片製作中 Coming Soon</div>
+                    <p class="coming-soon">即將上線</p>
+                </div>
+            </div>
 
             <footer>
                 Teacher Gary 小籠包老師
