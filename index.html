@@ -278,6 +278,57 @@
             border-top: 1px solid var(--border);
         }
 
+        /* COUNTDOWN */
+        .countdown-section {
+            padding: 32px 0 16px;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-unit {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px 20px;
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .countdown-unit-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .countdown-ended {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
         /* MOBILE */
         @media (max-width: 600px) {
             .hero h1 { font-size: 2.4rem; }
@@ -286,6 +337,9 @@
             .section-title { font-size: 1.3rem; }
             .buy-btn { padding: 16px 36px; font-size: 1.05rem; width: 100%; text-align: center; }
             .cta-bottom .price { font-size: 2rem; }
+            .countdown-unit { padding: 12px 14px; min-width: 64px; }
+            .countdown-number { font-size: 1.5rem; }
+            .countdown-timer { gap: 10px; }
         }
     </style>
 </head>
@@ -300,6 +354,31 @@
             <p class="tagline">你的英文夠好了，缺的是一套系統</p>
             <a href="https://buy.stripe.com/4gM3cv0PZa0YfRScJR9oc06" class="buy-btn">立即加入創始會員 $97 USD</a>
             <p class="price-tag"><span style="text-decoration: line-through; color: #666;">未來售價 $197</span> → 創始會員價 $97，限本週日截止</p>
+        </div>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="container">
+        <div class="countdown-section">
+            <p class="countdown-label">創始會員價倒數 · Founding Member Price Ends</p>
+            <div id="countdown" class="countdown-timer">
+                <div class="countdown-unit">
+                    <div class="countdown-number" id="cd-days">--</div>
+                    <div class="countdown-unit-label">天 Days</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-number" id="cd-hours">--</div>
+                    <div class="countdown-unit-label">時 Hours</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-number" id="cd-mins">--</div>
+                    <div class="countdown-unit-label">分 Mins</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-number" id="cd-secs">--</div>
+                    <div class="countdown-unit-label">秒 Secs</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -458,6 +537,36 @@
             Teacher Gary 小籠包老師
         </div>
     </footer>
+
+    <script>
+        // Countdown to Sunday April 19, 2026, 11:59:59 PM Bangkok time (GMT+7)
+        // That's April 19, 2026 23:59:59 +07:00 = April 19, 2026 16:59:59 UTC
+        const deadline = new Date('2026-04-19T23:59:59+07:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = deadline - now;
+
+            if (diff <= 0) {
+                document.getElementById('countdown').innerHTML =
+                    '<p class="countdown-ended">創始會員價已結束 · Founding member price has ended</p>';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+            document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+            document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 
 </body>
 </html>
