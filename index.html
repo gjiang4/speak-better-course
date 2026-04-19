@@ -1,572 +1,185 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>說得好，才值錢 — Speak Better Course</title>
-    <meta name="description" content="5 個面試框架，覆蓋 90% 的面試問題。創始會員價 $97 USD，限本週日截止。">
-    <meta property="og:title" content="說得好，才值錢 — Speak Better Course">
-    <meta property="og:description" content="你的英文夠好了，缺的是一套系統。5 個框架，覆蓋 90% 的面試問題。創始會員價 $97 USD。">
-    <meta property="og:image" content="https://gjiang4.github.io/speak-better-course/qa.png">
-    <meta property="og:url" content="https://gjiang4.github.io/speak-better-course/">
-    <meta property="og:type" content="website">
-    <meta name="description" content="5 個框架，覆蓋 90% 的面試問題。創始會員價 $97 USD，限本週日截止。">
-    <meta property="og:title" content="說得好，才值錢 — Speak Better Course">
-    <meta property="og:description" content="你的英文夠好了，缺的是一套系統。5 個框架，覆蓋 90% 的面試問題。創始會員價 $97 USD。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gjiang4.github.io/speak-better-course/">
-    <meta property="og:image" content="https://gjiang4.github.io/speak-better-course/qa.png">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #0a0a0a;
-            --surface: #141414;
-            --surface-2: #1e1e1e;
-            --text: #e8e8e8;
-            --text-muted: #999;
-            --accent: #d4a853;
-            --accent-dim: #b8912e;
-            --border: #2a2a2a;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>說得好，才值錢 — Speak Better. Get Paid More.</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #111;
+    color: #e0e0e0;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+  section { padding: 4rem 1.5rem; max-width: 720px; margin: 0 auto; }
 
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.8;
-            -webkit-font-smoothing: antialiased;
-        }
+  /* Hero */
+  .hero { text-align: center; padding-top: 6rem; padding-bottom: 3rem; }
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+  }
+  .hero .en-headline {
+    font-size: 1.25rem;
+    color: #999;
+    margin-bottom: 2.5rem;
+  }
+  .hero .sub-zh {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+  }
+  .hero .sub-en {
+    font-size: 0.95rem;
+    color: #888;
+  }
 
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+  /* Modules */
+  .modules h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .module-list { list-style: none; }
+  .module-list li {
+    padding: 1.25rem;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .module-list .label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #111;
+    background: #fff;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  .module-list .title {
+    display: block;
+    color: #e0e0e0;
+  }
 
-        /* HERO */
-        .hero {
-            padding: 80px 0 60px;
-            text-align: center;
-        }
+  /* Pricing */
+  .pricing { text-align: center; }
+  .pricing h2 {
+    font-size: 1.25rem;
+    color: #999;
+    margin-bottom: 1rem;
+  }
+  .pricing .price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  .cta {
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    background: #fff;
+    color: #111;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .cta:hover { background: #ddd; }
 
-        .hero h1 {
-            font-family: 'Noto Serif TC', serif;
-            font-size: 3.2rem;
-            font-weight: 900;
-            letter-spacing: 0.08em;
-            margin-bottom: 16px;
-            background: linear-gradient(135deg, var(--accent), #f0d080);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+  /* Testimonial */
+  .testimonial { text-align: center; }
+  .testimonial blockquote {
+    font-size: 1.15rem;
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .testimonial blockquote::before { content: '\201C'; font-size: 2rem; color: #555; position: absolute; top: -0.75rem; left: -0.25rem; }
+  .testimonial cite {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #888;
+  }
 
-        .hero .en-headline {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 32px;
-        }
+  /* Divider */
+  .divider {
+    border: none;
+    border-top: 1px solid #222;
+    max-width: 720px;
+    margin: 0 auto;
+  }
 
-        .hero .subheadline {
-            font-size: 1.15rem;
-            color: var(--text);
-            line-height: 2;
-            margin-bottom: 12px;
-        }
-
-        .hero .tagline {
-            font-size: 1.05rem;
-            color: var(--accent);
-            margin-bottom: 40px;
-            font-weight: 500;
-        }
-
-        /* BUY BUTTON */
-        .buy-btn {
-            display: inline-block;
-            background: var(--accent);
-            color: #0a0a0a;
-            padding: 18px 48px;
-            font-size: 1.15rem;
-            font-weight: 700;
-            border: none;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: all 0.2s;
-            letter-spacing: 0.05em;
-        }
-
-        .buy-btn:hover {
-            background: #f0d080;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(212, 168, 83, 0.25);
-        }
-
-        .price-tag {
-            margin-top: 16px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* SECTIONS */
-        section {
-            padding: 60px 0;
-            border-top: 1px solid var(--border);
-        }
-
-        .section-title {
-            font-family: 'Noto Serif TC', serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-
-        /* WHAT YOU GET */
-        .frameworks-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .frameworks-list li {
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .frameworks-list li:last-child {
-            border-bottom: none;
-        }
-
-        .framework-name {
-            font-weight: 700;
-            font-size: 1.05rem;
-            margin-bottom: 4px;
-        }
-
-        .framework-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .includes-box {
-            background: var(--surface-2);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px 24px;
-            margin-top: 24px;
-        }
-
-        .includes-box p {
-            color: var(--text);
-            font-size: 1rem;
-            margin-bottom: 10px;
-            letter-spacing: 0.02em;
-        }
-
-        .includes-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* WHO IT'S FOR */
-        .for-you p {
-            font-size: 1.05rem;
-            line-height: 2;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-
-        .for-you .level-line {
-            color: var(--text);
-            font-weight: 500;
-        }
-
-        /* LOGOS */
-        .logos-section {
-            text-align: center;
-        }
-
-        .logos-section .logos-label {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 24px;
-        }
-
-        .logos-section img {
-            max-width: 100%;
-        }
-
-        /* TESTIMONIALS */
-        .testimonial {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 28px;
-            margin-bottom: 20px;
-        }
-
-        .testimonial .quote {
-            font-size: 1.02rem;
-            line-height: 1.9;
-            margin-bottom: 16px;
-            color: var(--text);
-        }
-
-        .testimonial .quote-en {
-            font-size: 0.92rem;
-            line-height: 1.8;
-            margin-bottom: 16px;
-            color: var(--text-muted);
-            font-style: italic;
-        }
-
-        .testimonial .attribution {
-            font-size: 0.9rem;
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .testimonial .role {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* SCREENSHOTS */
-        .screenshots-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 16px;
-            max-width: 420px;
-        }
-
-        .screenshots-grid img {
-            max-width: 100%;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-        }
-
-        /* CTA BOTTOM */
-        .cta-bottom {
-            padding: 80px 0;
-            text-align: center;
-            border-top: 1px solid var(--border);
-        }
-
-        .cta-bottom .price {
-            font-family: 'Noto Serif TC', serif;
-            font-size: 2.4rem;
-            font-weight: 900;
-            color: var(--accent);
-            margin-bottom: 8px;
-        }
-
-        .cta-bottom .personal-note {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 32px;
-            line-height: 1.8;
-        }
-
-        /* FOOTER */
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border);
-        }
-
-        /* COUNTDOWN */
-        .countdown-section {
-            padding: 32px 0 16px;
-            text-align: center;
-        }
-
-        .countdown-label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .countdown-unit {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 16px 20px;
-            min-width: 80px;
-        }
-
-        .countdown-number {
-            font-family: 'Noto Serif TC', serif;
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--accent);
-            line-height: 1;
-            margin-bottom: 6px;
-        }
-
-        .countdown-unit-label {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .countdown-ended {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            font-style: italic;
-        }
-
-        /* MOBILE */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2.4rem; }
-            .hero { padding: 60px 0 40px; }
-            section { padding: 40px 0; }
-            .section-title { font-size: 1.3rem; }
-            .buy-btn { padding: 16px 36px; font-size: 1.05rem; width: 100%; text-align: center; }
-            .cta-bottom .price { font-size: 2rem; }
-            .countdown-unit { padding: 12px 14px; min-width: 64px; }
-            .countdown-number { font-size: 1.5rem; }
-            .countdown-timer { gap: 10px; }
-        }
-    </style>
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 3rem 1.5rem 2rem;
+    color: #555;
+    font-size: 0.85rem;
+  }
+</style>
 </head>
 <body>
 
-    <!-- HERO -->
-    <div class="container">
-        <div class="hero">
-            <h1>說得好，才值錢</h1>
-            <div class="en-headline">Speak Better. Get Paid More.</div>
-            <p class="subheadline">你的薪水不是取決於你有多優秀<br>而是取決於別人認為你有多優秀</p>
-            <p class="tagline">你的英文夠好了，缺的是一套系統</p>
-            <a href="https://buy.stripe.com/4gM3cv0PZa0YfRScJR9oc06" class="buy-btn">立即加入創始會員 $97 USD</a>
-            <p class="price-tag"><span style="text-decoration: line-through; color: #666;">未來售價 $197</span> → 創始會員價 $97，限本週日截止</p>
-        </div>
-    </div>
+<section class="hero">
+  <h1>說得好，才值錢</h1>
+  <p class="en-headline">Speak Better. Get Paid More.</p>
+  <p class="sub-zh">你的薪水不是取決於你有多優秀，而是取決於別人認為你有多優秀。</p>
+  <p class="sub-en">Your salary isn't determined by how good you are — it's determined by how good they think you are.</p>
+</section>
 
-    <!-- COUNTDOWN -->
-    <div class="container">
-        <div class="countdown-section">
-            <p class="countdown-label">創始會員價倒數 · Founding Member Price Ends</p>
-            <div id="countdown" class="countdown-timer">
-                <div class="countdown-unit">
-                    <div class="countdown-number" id="cd-days">--</div>
-                    <div class="countdown-unit-label">天 Days</div>
-                </div>
-                <div class="countdown-unit">
-                    <div class="countdown-number" id="cd-hours">--</div>
-                    <div class="countdown-unit-label">時 Hours</div>
-                </div>
-                <div class="countdown-unit">
-                    <div class="countdown-number" id="cd-mins">--</div>
-                    <div class="countdown-unit-label">分 Mins</div>
-                </div>
-                <div class="countdown-unit">
-                    <div class="countdown-number" id="cd-secs">--</div>
-                    <div class="countdown-unit-label">秒 Secs</div>
-                </div>
-            </div>
-        </div>
-    </div>
+<hr class="divider">
 
-    <!-- WHAT YOU GET -->
-    <div class="container">
-        <section>
-            <h2 class="section-title">這門課教你什麼</h2>
-            <p style="color: var(--text-muted); margin-bottom: 24px;">5 個框架，覆蓋 90% 的面試問題：</p>
-            <ul class="frameworks-list">
-                <li>
-                    <div class="framework-name">用一個框架把任何工作經歷講清楚</div>
-                    <div class="framework-desc">"Tell me about a time..."（告訴我你曾經⋯）</div>
-                </li>
-                <li>
-                    <div class="framework-name">如何在面試中清楚表達你的觀點</div>
-                    <div class="framework-desc">"What do you think about...?"（你怎麼看⋯）</div>
-                </li>
-                <li>
-                    <div class="framework-name">如何有邏輯地回答多重答案題</div>
-                    <div class="framework-desc">"What are your strengths?"（你的優勢是什麼？）</div>
-                </li>
-                <li>
-                    <div class="framework-name">如何回答「Tell me about yourself」</div>
-                    <div class="framework-desc">讓面試官在前 10 秒就記住你</div>
-                </li>
-                <li>
-                    <div class="framework-name">如何回答所有「為什麼」的問題</div>
-                    <div class="framework-desc">"Why do you want to work here?"（為什麼想來我們公司？）</div>
-                </li>
-            </ul>
-            <div class="includes-box">
-                <p>📹 9 支教學影片</p>
-                <p>📝 每個框架附練習工作表 — 填完就有你的專屬面試答案</p>
-                <p>📊 面試溝通力自我診斷測試</p>
-                <p>🎤 <strong>創始會員專屬：2 堂線上 Q&A 直播課 + 專屬 IG 群組</strong>（未來購買不包含）</p>
-            </div>
-        </section>
-    </div>
+<section class="modules">
+  <h2>課程內容</h2>
+  <ul class="module-list">
+    <li>
+      <span class="label">Module 1</span>
+      <span class="title">你的英文到底在幫你賺錢還是讓你少賺？</span>
+    </li>
+    <li>
+      <span class="label">Module 1</span>
+      <span class="title">為什麼面試技巧比學歷更值錢</span>
+    </li>
+    <li>
+      <span class="label">Module 2</span>
+      <span class="title">用一個框架把任何工作經歷講清楚</span>
+    </li>
+    <li>
+      <span class="label">Module 2</span>
+      <span class="title">如何回答「Tell me about yourself」讓面試官記住你</span>
+    </li>
+  </ul>
+</section>
 
-    <!-- WHO IT'S FOR -->
-    <div class="container">
-        <section class="for-you">
-            <h2 class="section-title">這門課適合誰</h2>
-            <p>你已經有專業能力。你缺的是一套系統，讓你在高壓下把實力展現出來。</p>
-            <p class="level-line">如果你中文能講得很好，但英文面試總是講不到位 — 這門課就是為你設計的。</p>
-            <p style="color: var(--accent); font-weight: 700; margin-top: 16px;">說不出來的實力，等於不存在。</p>
-        </section>
-    </div>
+<hr class="divider">
 
-    <!-- FOUNDING MEMBER BONUS -->
-    <div class="container">
-        <section style="text-align: center; padding: 48px 0;">
-            <h2 class="section-title">創始會員專屬福利</h2>
-            <p style="color: var(--accent); font-size: 1.2rem; font-weight: 600; margin-bottom: 8px;">2 堂線上 Q&A 直播課</p>
-            <p style="color: var(--text-muted); margin-bottom: 24px;">直接跟 Teacher Gary 小籠包老師 面對面練習，現場解答你的面試問題</p>
-            <div style="margin: 0 auto; max-width: 500px;">
-                <img src="qa.png" alt="Live Q&A with Teacher Gary" style="width: 100%; border-radius: 8px;" />
-            </div>
-            <div style="margin-top: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: left;">
-                <p style="color: var(--text); margin-bottom: 8px;">🎤 帶你的真實面試問題來，我現場幫你拆解</p>
-                <p style="color: var(--text); margin-bottom: 8px;">🧠 用課程框架即時示範如何回答</p>
-                <p style="color: var(--text); margin-bottom: 8px;">📹 錯過直播？創始會員可觀看回放</p>
-                <p style="color: var(--text); margin-bottom: 8px;">💬 創始會員專屬 IG 群組 — 和其他學員交流、提問</p>
-                <p style="color: #e74c3c; font-weight: 600;">⚠️ 此福利僅限創始會員，未來購買不包含</p>
-            </div>
-        </section>
-    </div>
+<section class="testimonial">
+  <blockquote>&ensp;特別是老師你提供的思維方式跟結構。</blockquote>
+  <cite>— Brian，兩週內拿到 offer</cite>
+</section>
 
-    <!-- LOGOS -->
-    <div class="container">
-        <section class="logos-section" style="padding-bottom: 30px;">
-            <p class="logos-label">深受專業人士信賴的課程<br>學員來自：</p>
-            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px 24px;">
-                <img src="logos.png" alt="Meta, Google, TSMC, ASUS, Amazon, Foxconn, EVA Air, Cathay Pacific, HSBC" />
-            </div>
-        </section>
-    </div>
+<hr class="divider">
 
-    <!-- TESTIMONIALS -->
-    <div class="container">
-        <section>
-            <h2 class="section-title">學員怎麼說</h2>
+<section class="pricing">
+  <h2>創始會員價格</h2>
+  <p class="price">$97 USD</p>
+  <a class="cta" href="https://buy.stripe.com/4gM3cv0PZa0YfRScJR9oc06">立即加入創始會員</a>
+</section>
 
-            <!-- Bruce - ASUS -->
-            <div class="testimonial">
-                <p class="quote">「跟 Gary 學習是一場徹底的轉變。以前我的簡報太偏重技術性，導致我的想法很難跟英語系的同事產生連結。Gary 教會我如何篩選我的專業知識，並用對的方式呈現資訊，讓我的觀點能真正對我的國際團隊更有價值。我現在對於做簡報、或是在工作上講英文，都感到更有自信了。」</p>
-                <p class="quote-en">"Working with Gary was a complete transformation. My presentations were too technical and my ideas wouldn't connect with English-speaking colleagues. Gary taught me how to filter my knowledge and present information so my ideas were more valuable to my global team."</p>
-                <div class="attribution">Bruce</div>
-                <div class="role">ASUS 華碩</div>
-            </div>
-
-            <!-- Brian/Justin Screenshots -->
-            <div class="testimonial">
-                <p class="quote">下載了免費電子書，兩週後他和朋友都拿到了 offer</p>
-                <div class="screenshots-grid">
-                    <img src="justin1.jpeg" alt="Student testimonial" />
-                    <img src="justin3.jpeg" alt="Student testimonial" />
-                    <img src="justin5.jpeg" alt="Student testimonial" />
-                </div>
-            </div>
-
-            <!-- Roger -->
-            <div class="testimonial">
-                <p class="quote">「之前上過其他平台的英文課，感覺效果都不太明顯。Gary 老師的課很有系統，也會依照我的職涯目標客製化內容。我覺得課程非常實用，很推薦！」</p>
-                <div class="attribution">Roger L</div>
-                <div class="role">攝影器材製造業專員・新北市</div>
-            </div>
-        </section>
-    </div>
-
-    <!-- FAQ -->
-    <div class="container">
-        <section>
-            <h2 class="section-title">常見問題</h2>
-
-            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin-bottom: 16px;">
-                <p style="color: var(--accent); font-weight: 700; margin-bottom: 8px;">課程包含什麼？</p>
-                <p style="color: var(--text-muted);">9 支影片課程、練習工作表、面試自我診斷測試。創始會員額外享有 2 堂線上 Q&A 直播課 + 專屬 IG 群組（未來購買不包含）。</p>
-            </div>
-
-            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin-bottom: 16px;">
-                <p style="color: var(--accent); font-weight: 700; margin-bottom: 8px;">課程什麼時候全部上線？</p>
-                <p style="color: var(--text-muted);">Module 1 + 2 已上線。Module 3 將於四月底上線。購買後立即可觀看已上線內容。</p>
-            </div>
-
-            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin-bottom: 16px;">
-                <p style="color: var(--accent); font-weight: 700; margin-bottom: 8px;">如果不適合我呢？</p>
-                <p style="color: var(--text-muted);">7 天內不滿意，來信即可全額退款，沒有任何條件。</p>
-            </div>
-
-            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin-bottom: 16px;">
-                <p style="color: var(--accent); font-weight: 700; margin-bottom: 8px;">創始會員價格會持續多久？</p>
-                <p style="color: var(--text-muted);">$97 USD 創始會員價格只到本週日。之後將調整為 $197 USD，且不包含 Q&A 直播課與專屬 IG 群組。</p>
-            </div>
-        </section>
-    </div>
-
-    <!-- CTA BOTTOM -->
-    <div class="container">
-        <div class="cta-bottom">
-            <p style="color: #666; text-decoration: line-through; font-size: 1.2rem; margin-bottom: 4px;">$197 USD</p>
-            <div class="price">$97 USD</div>
-            <p style="color: var(--accent); font-weight: 600; margin-bottom: 16px;">創始會員價，限本週日截止</p>
-            <p class="personal-note">
-                你是因為我的 IG 限動下載了電子書的人。<br>
-                這個價格只開放給你們。
-            </p>
-            <a href="https://buy.stripe.com/4gM3cv0PZa0YfRScJR9oc06" class="buy-btn">立即加入創始會員</a>
-            <p style="color: #666; font-size: 0.85rem; margin-top: 12px;">7 天內不滿意，全額退款</p>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            Teacher Gary 小籠包老師
-        </div>
-    </footer>
-
-    <script>
-        // Countdown to Sunday April 19, 2026, 11:59:59 PM Bangkok time (GMT+7)
-        // That's April 19, 2026 23:59:59 +07:00 = April 19, 2026 16:59:59 UTC
-        const deadline = new Date('2026-04-19T23:59:59+07:00').getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const diff = deadline - now;
-
-            if (diff <= 0) {
-                document.getElementById('countdown').innerHTML =
-                    '<p class="countdown-ended">創始會員價已結束 · Founding member price has ended</p>';
-                return;
-            }
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const secs = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
-            document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
-            document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    </script>
+<footer>Teacher Gary 小籠包老師</footer>
 
 </body>
 </html>
