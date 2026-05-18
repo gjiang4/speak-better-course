@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>英文面試技巧課程 — 說得好，才值錢</title>
-    <meta name="description" content="給中文母語的專業人士。想進國際企業，最實用的 5 個面試框架。$197 USD。">
-    <meta property="og:title" content="英文面試技巧課程 — 說得好，才值錢">
-    <meta property="og:description" content="給中文母語的專業人士。想進國際企業，最實用的 5 個面試框架。有結構地回答任何一題。">
+    <title>說得好，才值錢 — Speak Better Course</title>
+    <meta name="description" content="5 個面試框架，覆蓋 90% 的面試問題。早鳥優惠價 $97 USD，限 6/8 週日截止。">
+    <meta property="og:title" content="說得好，才值錢 — Speak Better Course">
+    <meta property="og:description" content="你的英文夠好了，缺的是一套系統。5 個框架，覆蓋 90% 的面試問題。早鳥優惠價 $97 USD。">
     <meta property="og:image" content="https://gjiang4.github.io/speak-better-course/qa.png">
     <meta property="og:url" content="https://gjiang4.github.io/speak-better-course/">
     <meta property="og:type" content="website">
+    <meta name="description" content="5 個框架，覆蓋 90% 的面試問題。早鳥優惠價 $97 USD，限 6/8 週日截止。">
+    <meta property="og:title" content="說得好，才值錢 — Speak Better Course">
+    <meta property="og:description" content="你的英文夠好了，缺的是一套系統。5 個框架，覆蓋 90% 的面試問題。早鳥優惠價 $97 USD。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gjiang4.github.io/speak-better-course/">
+    <meta property="og:image" content="https://gjiang4.github.io/speak-better-course/qa.png">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -61,15 +67,7 @@
             color: var(--text-muted);
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-
-        .hero .product-category {
-            font-size: 1rem;
-            color: var(--accent);
-            font-weight: 500;
             margin-bottom: 32px;
-            letter-spacing: 0.02em;
         }
 
         .hero .subheadline {
@@ -280,6 +278,57 @@
             border-top: 1px solid var(--border);
         }
 
+        /* COUNTDOWN */
+        .countdown-section {
+            padding: 32px 0 16px;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-unit {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px 20px;
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .countdown-unit-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .countdown-ended {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
         /* MOBILE */
         @media (max-width: 600px) {
             .hero h1 { font-size: 2.4rem; }
@@ -288,6 +337,9 @@
             .section-title { font-size: 1.3rem; }
             .buy-btn { padding: 16px 36px; font-size: 1.05rem; width: 100%; text-align: center; }
             .cta-bottom .price { font-size: 2rem; }
+            .countdown-unit { padding: 12px 14px; min-width: 64px; }
+            .countdown-number { font-size: 1.5rem; }
+            .countdown-timer { gap: 10px; }
         }
     </style>
 </head>
@@ -297,12 +349,36 @@
     <div class="container">
         <div class="hero">
             <h1>說得好，才值錢</h1>
-            <div class="en-headline">English Interview Skills Course</div>
-            <p class="product-category">英文面試技巧課程 · 給中文母語的專業人士</p>
+            <div class="en-headline">Speak Better. Get Paid More.</div>
             <p class="subheadline">你的薪水不是取決於你有多優秀<br>而是取決於別人認為你有多優秀</p>
             <p class="tagline">你的英文夠好了，缺的是一套系統</p>
-            <a href="https://buy.stripe.com/dRm5kD9mv8WU49a4dl9oc07" class="buy-btn">立即加入課程 $197 USD</a>
-            <p class="price-tag">$197 USD（約 NT$6,300）· 終身使用</p>
+            <a href="https://buy.stripe.com/4gM3cv0PZa0YfRScJR9oc06" class="buy-btn">立即加入早鳥優惠 $97 USD</a>
+            <p class="price-tag"><span style="text-decoration: line-through; color: #666;">未來售價 $197</span> → 早鳥優惠價 $97，限 6/8 週日截止</p>
+        </div>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="container">
+        <div class="countdown-section">
+            <p class="countdown-label">早鳥優惠倒數 · Early-Bird Price Ends</p>
+            <div id="countdown" class="countdown-timer">
+                <div class="countdown-unit">
+                    <div class="countdown-number" id="cd-days">--</div>
+                    <div class="countdown-unit-label">天 Days</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-number" id="cd-hours">--</div>
+                    <div class="countdown-unit-label">時 Hours</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-number" id="cd-mins">--</div>
+                    <div class="countdown-unit-label">分 Mins</div>
+                </div>
+                <div class="countdown-unit">
+                    <div class="countdown-number" id="cd-secs">--</div>
+                    <div class="countdown-unit-label">秒 Secs</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -310,7 +386,7 @@
     <div class="container">
         <section>
             <h2 class="section-title">這門課教你什麼</h2>
-            <p style="color: var(--text-muted); margin-bottom: 24px;">給想進國際企業的中文母語專業人士，最實用的 5 個面試框架：</p>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">5 個框架，覆蓋 90% 的面試問題：</p>
             <ul class="frameworks-list">
                 <li>
                     <div class="framework-name">用一個框架把任何工作經歷講清楚</div>
@@ -337,7 +413,7 @@
                 <p>📹 9 支教學影片</p>
                 <p>📝 每個框架附練習工作表 — 填完就有你的專屬面試答案</p>
                 <p>📊 面試溝通力自我診斷測試</p>
-                <p>♾️ 終身使用，隨時複習</p>
+                <p>🎤 <strong>早鳥優惠專屬：2 堂線上 Q&A 直播課</strong>（未來購買不包含）</p>
             </div>
         </section>
     </div>
@@ -349,6 +425,24 @@
             <p>你已經有專業能力。你缺的是一套系統，讓你在高壓下把實力展現出來。</p>
             <p class="level-line">如果你中文能講得很好，但英文面試總是講不到位 — 這門課就是為你設計的。</p>
             <p style="color: var(--accent); font-weight: 700; margin-top: 16px;">說不出來的實力，等於不存在。</p>
+        </section>
+    </div>
+
+    <!-- FOUNDING MEMBER BONUS -->
+    <div class="container">
+        <section style="text-align: center; padding: 48px 0;">
+            <h2 class="section-title">早鳥優惠專屬福利</h2>
+            <p style="color: var(--accent); font-size: 1.2rem; font-weight: 600; margin-bottom: 8px;">2 堂線上 Q&A 直播課</p>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">直接跟 Teacher Gary 小籠包老師 面對面練習，現場解答你的面試問題</p>
+            <div style="margin: 0 auto; max-width: 500px;">
+                <img src="qa.png" alt="Live Q&A with Teacher Gary" style="width: 100%; border-radius: 8px;" />
+            </div>
+            <div style="margin-top: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: left;">
+                <p style="color: var(--text); margin-bottom: 8px;">🎤 帶你的真實面試問題來，我現場幫你拆解</p>
+                <p style="color: var(--text); margin-bottom: 8px;">🧠 用課程框架即時示範如何回答</p>
+                <p style="color: var(--text); margin-bottom: 8px;">📹 錯過直播？早鳥優惠學員可觀看回放</p>
+                <p style="color: #e74c3c; font-weight: 600;">⚠️ 此福利僅限早鳥優惠期間購買，未來不包含</p>
+            </div>
         </section>
     </div>
 
@@ -401,12 +495,12 @@
 
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin-bottom: 16px;">
                 <p style="color: var(--accent); font-weight: 700; margin-bottom: 8px;">課程包含什麼？</p>
-                <p style="color: var(--text-muted);">9 支影片課程、練習工作表、面試自我診斷測試。終身使用，隨時複習。</p>
+                <p style="color: var(--text-muted);">9 支影片課程、練習工作表、面試自我診斷測試。早鳥優惠學員額外享有 2 堂線上 Q&A 直播課（未來購買不包含）。</p>
             </div>
 
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin-bottom: 16px;">
                 <p style="color: var(--accent); font-weight: 700; margin-bottom: 8px;">課程什麼時候全部上線？</p>
-                <p style="color: var(--text-muted);">Module 1 + 2 已上線。Module 3 將於四月底上線。購買後立即可觀看已上線內容。</p>
+                <p style="color: var(--text-muted);">全部 Module 已上線。購買後立即可觀看完整課程。</p>
             </div>
 
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin-bottom: 16px;">
@@ -415,8 +509,8 @@
             </div>
 
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin-bottom: 16px;">
-                <p style="color: var(--accent); font-weight: 700; margin-bottom: 8px;">這個課程適合什麼程度的人？</p>
-                <p style="color: var(--text-muted);">中文表達已經很流暢、英文基礎也夠用，但在英文面試中總覺得講不到位的專業人士。你需要的不是更多英文單字，是一套系統。</p>
+                <p style="color: var(--accent); font-weight: 700; margin-bottom: 8px;">早鳥優惠會持續多久？</p>
+                <p style="color: var(--text-muted);">$97 USD 早鳥優惠只到 6/8 週日。之後將調整為 $197 USD，且不包含 Q&A 直播課。</p>
             </div>
         </section>
     </div>
@@ -424,13 +518,14 @@
     <!-- CTA BOTTOM -->
     <div class="container">
         <div class="cta-bottom">
-            <div class="price">$197 USD</div>
-            <p style="color: var(--text-muted); margin-bottom: 24px;">約 NT$6,300 · 終身使用</p>
+            <p style="color: #666; text-decoration: line-through; font-size: 1.2rem; margin-bottom: 4px;">$197 USD</p>
+            <div class="price">$97 USD</div>
+            <p style="color: var(--accent); font-weight: 600; margin-bottom: 16px;">早鳥優惠價，限 6/8 週日截止</p>
             <p class="personal-note">
-                英文面試技巧課程<br>
-                給中文母語的專業人士
+                你是因為我的 IG 限動下載了電子書的人。<br>
+                這個價格只開放給你們。
             </p>
-            <a href="https://buy.stripe.com/dRm5kD9mv8WU49a4dl9oc07" class="buy-btn">立即加入課程</a>
+            <a href="https://buy.stripe.com/4gM3cv0PZa0YfRScJR9oc06" class="buy-btn">立即加入早鳥優惠</a>
             <p style="color: #666; font-size: 0.85rem; margin-top: 12px;">7 天內不滿意，全額退款</p>
         </div>
     </div>
@@ -441,6 +536,36 @@
             Teacher Gary 小籠包老師
         </div>
     </footer>
+
+    <script>
+        // Countdown to Sunday June 8, 2026, 11:59:59 PM Bangkok time (GMT+7)
+        // That's June 8, 2026 23:59:59 +07:00 = June 8, 2026 16:59:59 UTC
+        const deadline = new Date('2026-06-08T23:59:59+07:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = deadline - now;
+
+            if (diff <= 0) {
+                document.getElementById('countdown').innerHTML =
+                    '<p class="countdown-ended">早鳥優惠已結束 · Early-bird price has ended</p>';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+            document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+            document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 
 </body>
 </html>
